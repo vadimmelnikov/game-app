@@ -56,7 +56,7 @@ const PostReducer = (state = initialState, action) => {
           id: item[0],
           ...item[1]
         }
-      })?.sort((a, b) => b.collections.popularity - a.collections.popularity), loadingPosts: false };
+      })?.sort((a, b) => a.collections.popularity - b.collections.popularity), loadingPosts: false };
       break;
     case GET_POSTS_FAIL:
       state = {
