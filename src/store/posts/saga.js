@@ -1,12 +1,13 @@
-import { put, call } from "redux-saga/effects";
+import { takeLatest, put, call } from "redux-saga/effects";
 
+import { GET_POSTS } from "./actionTypes";
 
 import {
   getPostsSuccess,
   getPostsFail,
 } from "./actions";
-import { getPosts } from "../../helpers/backend_helper";
 
+import { getPosts } from "../../helpers/backend_helper";
 
 function* onGetPosts() {
   try {
@@ -17,4 +18,8 @@ function* onGetPosts() {
   }
 }
 
-export default onGetPosts;
+function* PostsSaga() {
+  yield takeLatest(GET_POSTS, onGetPosts);
+}
+
+export default PostsSaga;
