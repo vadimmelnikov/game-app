@@ -7,7 +7,62 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cart {
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.home {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.posts {
+  display: flex;
+  justify-content: center;
+}
+
+.posts img {
+  width: 100%;
+  height: auto;
+}
+
+.loader {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}
+
+.card {
+  margin-bottom: 1rem;
+  .card-title {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 0;
+    min-height: 40px;
+  }
+  .card-text {
+    font-size: 1em;
+    color: black;
+  }
+  &:hover {
+    background: rgb(228, 228, 228);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.full-height {
+  height: calc(100vh - 56px);
+  height: calc(var(--doc-height) - 56px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
